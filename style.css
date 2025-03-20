@@ -1,0 +1,129 @@
+/* Masonry Grid Layout */
+.pna-custom-masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .pna-category-ribbon {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    background-color: #FB4B2B;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  .pna-masonry-item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .pna-masonry-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .pna-masonry-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .pna-masonry-item:hover .pna-masonry-image {
+    transform: scale(1.1);
+  }
+  
+  .pna-masonry-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+    transition: background 0.3s ease;
+    border-radius: 4px;
+  }
+  
+  .pna-masonry-image:hover .pna-masonry-title {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Styling for posts without images */
+  .pna-masonry-no-image {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .pna-masonry-title-no-image {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Pagination Styling */
+  .pna-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .pna-page-link {
+    cursor: pointer;
+    padding: 8px 16px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .pna-page-link:hover {
+    background: #e0e0e0;
+  }
+  
+  .pna-page-link.active {
+    background: #FB4B2B;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .pna-custom-masonry-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .pna-custom-masonry-grid {
+      grid-template-columns: 1fr;
+    }
+  }
